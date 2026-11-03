@@ -18,6 +18,9 @@
   .wrap { max-width: 1040px; margin: 0 auto; padding: 96px 28px 96px; }
   header { margin-bottom: 72px; }
   .kicker { font-size: 13px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 22px; }
+  .kicker a { color: inherit; text-decoration: none; }
+  .kicker a:hover, .kicker a:focus-visible { color: var(--ink); }
+  .kicker .sep { margin: 0 .7em; color: #4a4a54; }
   h1 { font-size: clamp(44px, 9vw, 96px); line-height: 1.0; margin: 0 0 22px; font-weight: 600; letter-spacing: -.035em; }
   .sub { font-size: clamp(18px, 2.2vw, 22px); color: var(--muted); margin: 0; max-width: 34em; }
   .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: -24px 0 72px; }
@@ -91,7 +94,7 @@
 <body>
 <div class="wrap">
   <header>
-    <p class="kicker">Portfolio</p>
+    <p class="kicker">Portfolio<span class="sep">|</span><a href="https://github.com/benjaminmower">Profile</a></p>
     <h1>&ldquo;Bronco&rdquo; Benjamin Mower</h1>
     <p class="sub">Entertainment Technologist and Creator since 2008. Credited professionally as Ben Shea.</p>
   </header>
