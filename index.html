@@ -38,7 +38,7 @@
   .demo h3 { font-weight: 600; font-size: 22px; letter-spacing: -.015em; margin: 10px 8px 2px; }
   .demo .meta { font-size: 13px; letter-spacing: .04em; color: var(--muted); margin: 0 8px 14px; }
   .frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 12px; overflow: hidden; }
-  .frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .frame iframe, .frame video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
   .demo a { display: inline-block; margin: 14px 8px 0; font-size: 14px; font-weight: 500; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--muted); padding-bottom: 2px; }
   .demo a:hover { border-color: var(--ink); }
   .videos { display: grid; grid-template-columns: 1fr; gap: 14px; }
@@ -92,7 +92,7 @@
         <span class="vtext"><span class="vtitle">The College Try</span>
         <span class="vmeta">Game show demo with Brent Pella</span></span>
       </a>
-      <a class="vcard" href="https://share.icloud.com/photos/09013KLRBvmv8W9fZcshANfeA" target="_blank" rel="noopener" data-title="Alyce&#39;s Art Studio">
+      <a class="vcard" href="assets/video/alyces-art-studio.mp4" data-video="assets/video/alyces-art-studio.mp4" data-poster="assets/video/alyces-art-studio.jpg" data-thumb="assets/video/alyces-art-studio.jpg" data-title="Alyce&#39;s Art Studio">
         <span class="thumb"><span class="play"></span></span>
         <span class="vtext"><span class="vtitle">Alyce&rsquo;s Art Studio</span>
         <span class="vmeta">Art tutorial with Alyce Marie</span></span>
@@ -168,9 +168,9 @@
 <script>
   // Paste each deck's URL between the quotes. Empty means the row shows "Available on request".
   var DECK_LINKS = {
-    forArtsSake: "",
-    perfectSet: "",
-    prizeOrPunishment: ""
+    forArtsSake: "assets/decks/for-arts-sake.pdf",
+    perfectSet: "assets/decks/The%20Perfect%20Set.pdf",
+    prizeOrPunishment: "assets/decks/PRIZE%20OR%20PUNISHMENT%20(GAMES)%20.pdf"
   };
   document.querySelectorAll(".deck[data-deck]").forEach(function (row) {
     var url = DECK_LINKS[row.dataset.deck];
@@ -209,9 +209,11 @@
           .catch(function () {});
       }
       card.addEventListener("click", function (e) {
-        if (!dlg.showModal || !card.dataset.embed) return;
+        if (!dlg.showModal || !(card.dataset.embed || card.dataset.video)) return;
         e.preventDefault();
-        frame.innerHTML = '<iframe src="' + card.dataset.embed + '" title="' + card.dataset.title + '" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+        if (card.dataset.video) {
+          frame.innerHTML = '<video controls autoplay playsinline preload="metadata" poster="' + card.dataset.poster + '" src="' + card.dataset.video + '" title="' + card.dataset.title + '"></video>';
+        } else frame.innerHTML = '<iframe src="' + card.dataset.embed + '" title="' + card.dataset.title + '" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>';
         dlg.showModal();
       });
     });
