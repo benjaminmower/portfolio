@@ -16,6 +16,10 @@
   .kicker { font-size: 13px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 22px; }
   h1 { font-size: clamp(44px, 9vw, 96px); line-height: 1.0; margin: 0 0 22px; font-weight: 600; letter-spacing: -.035em; }
   .sub { font-size: clamp(18px, 2.2vw, 22px); color: var(--muted); margin: 0; max-width: 34em; }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: -24px 0 72px; }
+  .stat { padding: 24px 28px; background: var(--card); border: 1px solid var(--rule); border-radius: 20px; }
+  .stat .num { display: block; font-size: clamp(36px, 5vw, 52px); font-weight: 600; letter-spacing: -.03em; line-height: 1.05; }
+  .stat .lbl { display: block; margin-top: 10px; font-size: 16px; color: var(--muted); }
   section { margin-bottom: 72px; }
   h2 { font-size: clamp(26px, 3.6vw, 36px); font-weight: 600; letter-spacing: -.02em; margin: 0 0 6px; color: var(--ink); }
   .note { color: var(--muted); font-size: 16px; margin: 0 0 24px; }
@@ -26,6 +30,9 @@
   .deck .title { font-size: 22px; font-weight: 500; letter-spacing: -.01em; }
   .deck .na { font-size: 14px; color: var(--muted); white-space: nowrap; }
   .deck .na + a { margin-left: auto; }
+  .deck .dthumb { display: block; flex: none; height: 76px; width: auto; border-radius: 6px; border: 1px solid var(--rule); background: #000; }
+  .deck .dthumb.poster { height: 132px; }
+  .deck.has-thumb .title { flex: 1; min-width: 0; }
   .deck a { font-size: 14px; font-weight: 600; white-space: nowrap; color: #09090b; background: var(--ink); text-decoration: none; border-radius: 999px; padding: 9px 18px; }
   .deck a:hover, .deck a:focus-visible { background: #fff; }
   .pipes { display: grid; gap: 14px; }
@@ -59,6 +66,8 @@
   @media (max-width: 720px) {
     .wrap { padding: 56px 20px 64px; }
     .demos { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr; margin-top: -16px; }
+    .stat { padding: 20px 22px; border-radius: 16px; }
     .vcard { gap: 14px; padding: 10px; border-radius: 16px; }
     .thumb { flex-basis: 132px; border-radius: 10px; }
     .play { width: 36px; height: 36px; margin: -18px 0 0 -18px; }
@@ -67,6 +76,8 @@
     .vmeta { font-size: 13px; }
     .deck { flex-direction: column; align-items: flex-start; gap: 12px; }
     .deck .na + a { margin-left: 0; }
+    .deck .dthumb { height: 64px; }
+    .deck .dthumb.poster { height: 110px; }
     .pipe { padding: 22px; }
   }
 </style>
@@ -149,8 +160,8 @@
     <p class="note">Directing, producing, and writing credits.</p>
     <div class="decks">
       <div class="deck"><span class="title">Ben Shea, full credits</span><span class="na">Director, Producer, Writer</span><a href="https://www.imdb.com/name/nm6156422/">IMDb profile</a></div>
-      <div class="deck"><span class="title">I Hope My Ex Doesn't See This (2020)</span><span class="na">Director, Executive Producer</span><a href="https://www.imdb.com/title/tt12328594/">IMDb</a></div>
-      <div class="deck"><span class="title">Dark White (2020)</span><span class="na">Director, Executive Producer</span><a href="https://www.imdb.com/title/tt12280468/">IMDb</a></div>
+      <div class="deck has-thumb"><img class="dthumb poster" src="assets/thumbnails/i-hope-my-ex-doesnt-see-this.jpg" width="1172" height="1808" alt="Poster for I Hope My Ex Doesn't See This" loading="lazy"><span class="title">I Hope My Ex Doesn't See This (2020)</span><span class="na">Director, Executive Producer</span><a href="https://www.imdb.com/title/tt12328594/">IMDb</a></div>
+      <div class="deck has-thumb"><img class="dthumb poster" src="assets/thumbnails/dark-white.jpg" width="1442" height="1806" alt="Poster for Dark White" loading="lazy"><span class="title">Dark White (2020)</span><span class="na">Director, Executive Producer</span><a href="https://www.imdb.com/title/tt12280468/">IMDb</a></div>
     </div>
   </section>
 
@@ -158,9 +169,9 @@
     <h2>Pitch decks</h2>
     <p class="note">Original format pitches.</p>
     <div class="decks">
-      <div class="deck" data-deck="forArtsSake"><span class="title">For Art&rsquo;s Sake</span></div>
-      <div class="deck" data-deck="perfectSet"><span class="title">The Perfect Set</span></div>
-      <div class="deck" data-deck="prizeOrPunishment"><span class="title">Prize or Punishment</span></div>
+      <div class="deck has-thumb" data-deck="forArtsSake"><img class="dthumb" src="assets/thumbnails/deck-for-arts-sake.jpg" width="1280" height="720" alt="For Art's Sake title slide" loading="lazy"><span class="title">For Art&rsquo;s Sake</span></div>
+      <div class="deck has-thumb" data-deck="perfectSet"><img class="dthumb" src="assets/thumbnails/deck-the-perfect-set.jpg" width="1280" height="960" alt="The Perfect Set title slide" loading="lazy"><span class="title">The Perfect Set</span></div>
+      <div class="deck has-thumb" data-deck="prizeOrPunishment"><img class="dthumb" src="assets/thumbnails/deck-prize-or-punishment.jpg" width="1280" height="960" alt="Prize or Punishment title slide" loading="lazy"><span class="title">Prize or Punishment</span></div>
     </div>
   </section>
 
