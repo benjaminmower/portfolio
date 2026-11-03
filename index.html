@@ -57,6 +57,7 @@
   .play::after { content: ""; position: absolute; left: 23px; top: 18px; border-left: 17px solid #09090b; border-top: 11px solid transparent; border-bottom: 11px solid transparent; }
   .vtitle { display: block; font-size: 24px; font-weight: 600; letter-spacing: -.015em; margin: 0; }
   .vmeta { display: block; font-size: 15px; color: var(--muted); margin: 4px 0 0; }
+  .vdesc { display: block; font-size: 15px; line-height: 1.5; color: #cfcfd4; margin: 10px 0 0; max-width: 40em; }
   dialog#player { width: min(960px, 94vw); padding: 0; border: 1px solid var(--rule); border-radius: 16px; background: #000; color: var(--ink); overflow: visible; }
   dialog#player::backdrop { background: rgba(0,0,0,.82); }
   dialog#player .frame { border-radius: 16px; }
@@ -74,6 +75,7 @@
     .play::after { left: 14px; top: 11px; border-left: 11px solid #09090b; border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
     .vtitle { font-size: 18px; }
     .vmeta { font-size: 13px; }
+    .vdesc { font-size: 13px; margin-top: 6px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
     .deck { flex-direction: column; align-items: flex-start; gap: 12px; }
     .deck .na + a { margin-left: 0; }
     .deck .dthumb { height: 64px; }
@@ -98,15 +100,17 @@
   <section>
     <h2>Video</h2>
     <div class="videos">
-      <a class="vcard" href="https://www.youtube.com/watch?v=QBcwz2yN4cE" data-embed="https://www.youtube-nocookie.com/embed/QBcwz2yN4cE?autoplay=1" data-thumb="https://i.ytimg.com/vi/QBcwz2yN4cE/hqdefault.jpg" data-title="100 for 100">
-        <span class="thumb"><span class="play"></span></span>
-        <span class="vtext"><span class="vtitle">100 for 100</span>
-        <span class="vmeta">Game show demo with Morgan Jay</span></span>
-      </a>
-      <a class="vcard" href="https://www.youtube.com/watch?v=sve_4RRbRkE" data-embed="https://www.youtube-nocookie.com/embed/sve_4RRbRkE?autoplay=1" data-thumb="https://i.ytimg.com/vi/sve_4RRbRkE/hqdefault.jpg" data-title="The College Try">
+      <a class="vcard" href="https://www.youtube.com/watch?v=QBcwz2yN4cE" data-embed="https://www.youtube-nocookie.com/embed/QBcwz2yN4cE?autoplay=1" data-thumb="https://i.ytimg.com/vi/QBcwz2yN4cE/hqdefault.jpg" data-title="The College Try">
         <span class="thumb"><span class="play"></span></span>
         <span class="vtext"><span class="vtitle">The College Try</span>
-        <span class="vmeta">Game show demo with Brent Pella</span></span>
+        <span class="vmeta">Game show demo with Brent Pella</span>
+        <span class="vdesc">Host Brent Pella gives it &lsquo;the college try&rsquo; at college towns across the country in search of the most unique foods, craziest traditions, and coolest alumni that student loans have ever produced. Insomniac meets Diners, Drive-Ins and Dives in a Gen Z&ndash;Millennial episodic travel-adventure show.</span></span>
+      </a>
+      <a class="vcard" href="https://www.youtube.com/watch?v=sve_4RRbRkE" data-embed="https://www.youtube-nocookie.com/embed/sve_4RRbRkE?autoplay=1" data-thumb="https://i.ytimg.com/vi/sve_4RRbRkE/hqdefault.jpg" data-title="100 for 100">
+        <span class="thumb"><span class="play"></span></span>
+        <span class="vtext"><span class="vtitle">100 for 100</span>
+        <span class="vmeta">Game show demo with Morgan Jay</span>
+        <span class="vdesc">A competition game show that gives contestants a chance to win $100 if they complete a task in under 100 seconds. We hit the beaches of Santa Monica to see who has what it takes to win. The pilot episode, produced with Command Line Productions.</span></span>
       </a>
       <a class="vcard" href="assets/video/alyces-art-studio.mp4" data-video="assets/video/alyces-art-studio.mp4" data-poster="assets/video/alyces-art-studio.jpg" data-thumb="assets/video/alyces-art-studio.jpg" data-title="Alyce&#39;s Art Studio">
         <span class="thumb"><span class="play"></span></span>
