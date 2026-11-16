@@ -3,27 +3,68 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>&ldquo;Bronco&rdquo; Benjamin Mower | Entertainment Portfolio</title>
-<meta name="description" content="Recent Digital Image Technician credits and original pitch decks by Benjamin Mower (credited as Ben Shea).">
-<meta name="robots" content="noindex">
+<title>&ldquo;Bronco&rdquo; Benjamin Mower | Creative Production &amp; Implementation</title>
+<meta name="description" content="Creative production, customer implementation, and technical enablement by Benjamin Mower. Selected work from Paramount+, Compass, Apple, and film production.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="&ldquo;Bronco&rdquo; Benjamin Mower | Entertainment Portfolio">
-<meta property="og:description" content="Creating entertainment with technology since 2008. Video, production pipelines, DIT credits, and original pitch decks. Credited professionally as Ben Shea.">
+<meta property="og:title" content="&ldquo;Bronco&rdquo; Benjamin Mower | Creative Production &amp; Implementation">
+<meta property="og:description" content="Production workflows at Paramount+, customer deployment at Compass, and technical training at Apple. Explore selected work by Benjamin Mower, credited in entertainment as Ben Shea.">
 <meta property="og:url" content="https://benjaminmower.github.io/portfolio/">
+<link rel="canonical" href="https://benjaminmower.github.io/portfolio/">
 <style>
-  :root { --bg:#09090b; --ink:#f5f5f3; --muted:#8e8e96; --rule:#232328; --card:#111115; --card2:#16161b; }
+  :root {
+    color-scheme: dark;
+    --bg:#060810; --ink:#f7f7f7; --muted:#9bafb9;
+    --rule:#24353e; --card:#10171c; --card2:#162329;
+    --accent:#40c9a2; --highlight:#e0e03e; --blue:#628395;
+    --secondary:#b8c8cf; --copy:#d2dce0; --case-rule:#2f594d;
+  }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
-  body { margin:0; background: radial-gradient(900px 480px at 50% -120px, #26233a 0%, rgba(9,9,11,0) 70%), var(--bg); background-repeat: no-repeat; color:var(--ink); font-family: Inter, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; line-height:1.55; -webkit-font-smoothing: antialiased; }
+  body { margin:0; background: radial-gradient(900px 480px at 50% -120px, #1d3a33 0%, rgba(6,8,16,0) 70%), var(--bg); background-repeat: no-repeat; color:var(--ink); font-family: Inter, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; line-height:1.55; -webkit-font-smoothing: antialiased; }
   .wrap { max-width: 1040px; margin: 0 auto; padding: 96px 28px 96px; }
-  header { margin-bottom: 72px; }
+  header { margin-bottom: 56px; }
   .kicker { font-size: 13px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 22px; }
   .kicker a { color: inherit; text-decoration: none; }
-  .kicker a:hover, .kicker a:focus-visible { color: var(--ink); }
-  .kicker .sep { margin: 0 .7em; color: #4a4a54; }
+  .kicker a:hover, .kicker a:focus-visible { color: var(--accent); }
+  .kicker .sep { margin: 0 .7em; color: var(--blue); }
   h1 { font-size: clamp(34px, 6vw, 64px); line-height: 1.0; margin: 0 0 22px; font-weight: 600; letter-spacing: -.035em; }
-  .sub { font-size: 15px; color: var(--muted); margin: 0; }
-  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: -24px 0 72px; }
+  .lead { max-width: 760px; margin: 0 0 16px; font-size: clamp(23px, 3.3vw, 32px); line-height: 1.3; letter-spacing: -.02em; }
+  .sub { max-width: 680px; font-size: 16px; color: var(--muted); margin: 0; }
+  .sub + .sub { margin-top: 16px; }
+  .sub.credit { font-size: 14px; }
+  .paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 32px; }
+  .path { display: block; padding: 22px 24px; border: 1px solid var(--rule); border-radius: 16px; background: var(--card); color: var(--ink); text-decoration: none; }
+  .path:hover { border-color: var(--accent); background: var(--card2); }
+  .path strong { display: block; color: var(--accent); font-size: 19px; font-weight: 600; margin-bottom: 8px; }
+  .path span { display: block; color: var(--secondary); font-size: 15px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+  section[id], article[id] { scroll-margin-top: 28px; }
+  .section-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px; margin-bottom: 6px; }
+  .section-top h2 { margin-bottom: 0; }
+  .text-link { color: var(--accent); font-size: 14px; text-underline-offset: 4px; }
+  .eyebrow { margin: 0 0 10px; color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+  .case { padding: clamp(24px, 4vw, 40px); background: linear-gradient(135deg, #142b25, var(--card)); border: 1px solid var(--case-rule); border-radius: 20px; }
+  .case h3 { max-width: 720px; margin: 0 0 16px; font-size: clamp(26px, 3.8vw, 36px); line-height: 1.2; font-weight: 600; letter-spacing: -.025em; }
+  .case > p:not(.eyebrow) { max-width: 760px; margin: 0 0 18px; color: var(--copy); font-size: 17px; }
+  .case > p.meta { font-size: 13px; color: var(--secondary); }
+  .case-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; list-style: none; padding: 24px 0; margin: 24px 0 0; border-top: 1px solid var(--case-rule); }
+  .case-steps strong { display: block; font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .case-steps span { display: block; color: var(--secondary); font-size: 15px; }
+  .results { display: grid; grid-template-columns: 1fr 1.6fr 1fr 1fr; gap: 20px; padding-top: 24px; margin: 0; border-top: 1px solid var(--case-rule); }
+  .results dt { margin-top: 8px; color: var(--secondary); font-size: 14px; }
+  .results dd { margin: 0; color: var(--highlight); font-size: clamp(24px, 3vw, 32px); line-height: 1.2; font-weight: 600; letter-spacing: -.025em; }
+  .results div { display: flex; flex-direction: column; }
+  .results dd { order: -1; }
+  .subsection-title { margin: 32px 0 16px; font-size: 22px; font-weight: 600; letter-spacing: -.015em; }
+  .supporting { margin-top: 14px; }
+  .implementation-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .implementation-grid .featured { grid-column: 1 / -1; }
+  .pipe .eyebrow { font-size: 12px; color: var(--accent); margin-bottom: 10px; }
+  .pipe p + p { margin-top: 14px; }
+  .case-link { display: inline-block; margin-top: 18px; }
+  .section-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin-top: 22px; }
+  .contact-link { display: inline-block; padding: 11px 20px; border-radius: 999px; background: var(--accent); color: var(--bg); text-decoration: none; font-size: 14px; font-weight: 600; }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 32px 0 0; }
   .stat { padding: 24px 28px; background: var(--card); border: 1px solid var(--rule); border-radius: 20px; }
   .stat .num { display: block; font-size: clamp(36px, 5vw, 52px); font-weight: 600; letter-spacing: -.03em; line-height: 1.05; }
   .stat .lbl { display: block; margin-top: 10px; font-size: 16px; color: var(--muted); }
@@ -40,12 +81,12 @@
   .deck .dthumb { display: block; flex: none; height: 76px; width: auto; border-radius: 6px; border: 1px solid var(--rule); background: #000; }
   .deck .dthumb.poster { height: 132px; }
   .deck.has-thumb .title { flex: 1; min-width: 0; }
-  .deck a { font-size: 14px; font-weight: 600; white-space: nowrap; color: #09090b; background: var(--ink); text-decoration: none; border-radius: 999px; padding: 9px 18px; }
-  .deck a:hover, .deck a:focus-visible { background: #fff; }
+  .deck a { font-size: 14px; font-weight: 600; white-space: nowrap; color: var(--bg); background: var(--accent); text-decoration: none; border-radius: 999px; padding: 9px 18px; }
+  .contact-link:hover, .contact-link:focus-visible, .deck a:hover, .deck a:focus-visible { background: var(--highlight); }
   .pipes { display: grid; gap: 14px; }
   .pipe { padding: 28px; background: var(--card); border: 1px solid var(--rule); border-radius: 20px; }
   .pipe h3 { font-weight: 600; font-size: 24px; letter-spacing: -.015em; margin: 0 0 10px; }
-  .pipe p { margin: 0; font-size: 17px; color: #cfcfd4; }
+  .pipe p { margin: 0; font-size: 17px; color: var(--copy); }
   .pipe .meta { font-size: 13px; letter-spacing: .04em; color: var(--muted); margin-top: 16px; }
   .demos { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .demo { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 16px 16px 18px; }
@@ -57,29 +98,37 @@
   .demo a:hover { border-color: var(--ink); }
   .videos { display: grid; grid-template-columns: 1fr; gap: 14px; }
   .vcard { display: flex; align-items: center; gap: 24px; padding: 14px; background: var(--card); border: 1px solid var(--rule); border-radius: 20px; text-decoration: none; color: inherit; transition: border-color .2s ease, background .2s ease; }
-  .vcard:hover, .vcard:focus-visible { border-color: #4a4a54; background: var(--card2); }
+  .vcard:hover, .vcard:focus-visible { border-color: var(--blue); background: var(--card2); }
   .vtext { display: block; min-width: 0; }
-  .thumb { position: relative; display: block; flex: 0 0 300px; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: #131318 center / cover no-repeat; border: 1px solid var(--rule); }
-  .play { position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%; background: rgba(245,245,243,.92); }
-  .play::after { content: ""; position: absolute; left: 23px; top: 18px; border-left: 17px solid #09090b; border-top: 11px solid transparent; border-bottom: 11px solid transparent; }
+  .thumb { position: relative; display: block; flex: 0 0 300px; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: var(--card2) center / cover no-repeat; border: 1px solid var(--rule); }
+  .play { position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%; background: var(--accent); }
+  .play::after { content: ""; position: absolute; left: 23px; top: 18px; border-left: 17px solid var(--bg); border-top: 11px solid transparent; border-bottom: 11px solid transparent; }
   .vtitle { display: block; font-size: 24px; font-weight: 600; letter-spacing: -.015em; margin: 0; }
   .vmeta { display: block; font-size: 15px; color: var(--muted); margin: 4px 0 0; }
-  .vdesc { display: block; font-size: 15px; line-height: 1.5; color: #cfcfd4; margin: 10px 0 0; max-width: 40em; }
+  .vdesc { display: block; font-size: 15px; line-height: 1.5; color: var(--copy); margin: 10px 0 0; max-width: 40em; }
   dialog#player { width: min(960px, 94vw); padding: 0; border: 1px solid var(--rule); border-radius: 16px; background: #000; color: var(--ink); overflow: visible; }
   dialog#player::backdrop { background: rgba(0,0,0,.82); }
   dialog#player .frame { border-radius: 16px; }
   #closePlayer { position: absolute; right: 0; top: -46px; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--rule); background: var(--card2); color: var(--ink); font-size: 22px; line-height: 1; cursor: pointer; }
   footer { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; }
-  footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--muted); }
+  footer a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--muted); }
+  @media (min-width: 721px) and (max-width: 900px) {
+    .results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
   @media (max-width: 720px) {
     .wrap { padding: 56px 20px 64px; }
     .demos { grid-template-columns: 1fr; }
-    .stats { grid-template-columns: 1fr; margin-top: -16px; }
+    .paths, .implementation-grid, .case-steps, .results { grid-template-columns: 1fr; }
+    .implementation-grid .featured { grid-column: auto; }
+    .path { padding: 20px; }
+    .case-steps { gap: 18px; }
+    .results { gap: 22px; }
+    .stats { grid-template-columns: 1fr; }
     .stat { padding: 20px 22px; border-radius: 16px; }
     .vcard { gap: 14px; padding: 10px; border-radius: 16px; }
     .thumb { flex-basis: 132px; border-radius: 10px; }
     .play { width: 36px; height: 36px; margin: -18px 0 0 -18px; }
-    .play::after { left: 14px; top: 11px; border-left: 11px solid #09090b; border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+    .play::after { left: 14px; top: 11px; border-left: 11px solid var(--bg); border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
     .vtitle { font-size: 18px; }
     .vmeta { font-size: 13px; }
     .vdesc { font-size: 13px; margin-top: 6px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
@@ -89,30 +138,57 @@
     .deck .dthumb.poster { height: 110px; }
     .pipe { padding: 22px; }
   }
+  @media (max-width: 420px) {
+    .vcard { flex-direction: column; align-items: stretch; }
+    .thumb { flex: none; width: 100%; }
+    .vtext { padding: 2px 6px 8px; }
+    .vdesc { display: block; }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <p class="kicker">Portfolio<span class="sep">|</span><a href="https://github.com/benjaminmower">Profile</a><span class="sep">|</span><a href="resume.html">Resume</a></p>
+    <p class="kicker">Selected work<span class="sep">|</span><a href="resume.html">Resume</a><span class="sep">|</span><a href="https://github.com/benjaminmower">GitHub</a></p>
     <h1>&ldquo;Bronco&rdquo; Benjamin Mower</h1>
-    <p class="sub">Creating entertainment with technology since 2008. Credited professionally as Ben Shea.</p>
+    <p class="lead">I run productions, build operational systems, and help people use them.</p>
+    <p class="sub">Creator, operator, and Glue Guy. I learned on construction sites with my dad: pay attention to the work, anticipate the next tool needed, and have it ready to hand off.</p>
+    <p class="sub">That approach carries through my work: building production workflows at Paramount+, deploying and teaching AI tools with Compass, and coordinating trades, architects, engineers, and homeowners on the Palisades rebuilds.</p>
+    <p class="sub credit">Credited in entertainment as Ben Shea.</p>
+    <nav class="paths" aria-label="Explore selected work">
+      <a class="path" href="#creative-production"><strong>Creative production &amp; operations &darr;</strong><span>Production delivery, workflow design, and selected screen work.</span></a>
+      <a class="path" href="#implementation"><strong>Implementation &amp; enablement &darr;</strong><span>Customer deployment, technical training, and construction delivery.</span></a>
+    </nav>
   </header>
 
-  <div class="stats">
-    <div class="stat"><span class="num">1.5M+</span><span class="lbl">YouTube views combined on I Hope My Ex Doesn&rsquo;t See This and Dark White</span></div>
-    <div class="stat"><span class="num">5M+</span><span class="lbl">Reach of clips from both on TikTok</span></div>
-  </div>
-   
-  <section>
-    <h2>Video</h2>
+  <section id="creative-production" aria-labelledby="creative-heading">
+    <div class="section-top">
+      <h2 id="creative-heading">Creative production &amp; operations</h2>
+      <a class="text-link" href="#implementation">Explore implementation work &darr;</a>
+    </div>
+    <p class="note">Producing the work and building the systems that keep it moving.</p>
+    <article class="case" id="paramount">
+      <p class="eyebrow">Paramount+ &middot; Technical Producer, Creative Content &middot; 2022&ndash;2024</p>
+      <h3>Three production tools consolidated into Silverstack Lab.</h3>
+      <p>An audit found assets losing chain of custody at handoffs. I built the business case, secured leadership approval, and consolidated processing into Silverstack Lab. That change reduced daily processing from six hours to 30&ndash;45 minutes.</p>
+      <p>The Silverstack Lab workflow then triggered updates into the Airtable database I built. Airtable became the department-wide reference for personnel, schedules, payroll, and production reporting across a $3M annual portfolio.</p>
+      <p>Across the production workflow, error margin dropped to effectively zero and throughput tripled, with no added headcount.</p>
+      <p class="meta">Silverstack Lab &middot; Airtable &middot; Frame.io &middot; Entertainment Partners payroll onboarding</p>
+      <ol class="case-steps" aria-label="How the workflow changed">
+        <li><strong>1. Consolidate processing</strong><span>Replace the three-tool processing workflow with Silverstack Lab.</span></li>
+        <li><strong>2. Connect the department reference</strong><span>Trigger updates into the Airtable database I built for shared tracking and reporting.</span></li>
+        <li><strong>3. Train the team</strong><span>Write the playbooks and run fundamentals workshops until the team can operate it independently.</span></li>
+      </ol>
+      <dl class="results">
+        <div><dt>Assets annually</dt><dd>10,000+</dd></div>
+        <div><dt>Daily processing after Silverstack Lab consolidation</dt><dd>6 hours &rarr; 30&ndash;45 min</dd></div>
+        <div><dt>Productions on two Burbank stages</dt><dd>200</dd></div>
+        <div><dt>Subcontractors across multiple states</dt><dd>60+</dd></div>
+      </dl>
+    </article>
+
+    <h3 class="subsection-title">Selected productions</h3>
     <div class="videos">
-      <a class="vcard" href="https://www.youtube.com/watch?v=x7BypzuVqNU&t=1810s" data-embed="https://www.youtube-nocookie.com/embed/x7BypzuVqNU?autoplay=1&start=1810&rel=0" data-thumb="https://i.ytimg.com/vi/x7BypzuVqNU/hqdefault.jpg" data-title="The Wally Report Podcast">
-        <span class="thumb"><span class="play"></span></span>
-        <span class="vtext"><span class="vtitle">The Wally Report Podcast</span>
-        <span class="vmeta">Cohost</span>
-        <span class="vdesc">Top 5 TV Shows of February 2025.</span></span>
-      </a>
       <a class="vcard" href="https://www.youtube.com/watch?v=3SiYyIAz5xU" data-embed="https://www.youtube-nocookie.com/embed/3SiYyIAz5xU?autoplay=1" data-thumb="https://i.ytimg.com/vi/3SiYyIAz5xU/hqdefault.jpg" data-title="The Ready Room with Wil Wheaton">
         <span class="thumb"><span class="play"></span></span>
         <span class="vtext"><span class="vtitle">The Ready Room with Wil Wheaton</span>
@@ -125,6 +201,52 @@
         <span class="vmeta">Technical producer, Paramount+</span>
         <span class="vdesc">Season 2, Episode 1: Pablo Schreiber on returning to Halo.</span></span>
       </a>
+    </div>
+    <article class="pipe supporting">
+      <h3>On-set image data and color pipeline</h3>
+      <p>Technical authority on set for Netflix, Amazon, and Warner Bros. Discovery productions and commercial campaigns. Designed the data workflow from pre-production through production to post and VFX. Kept chain of custody and audit-ready logging for footage that cannot be reshot.</p>
+      <div class="meta">Silverstack Lab &middot; Premiere Pro &middot; Frame.io &middot; DaVinci Resolve &middot; Canva</div>
+    </article>
+    <a class="text-link case-link" href="#more-creative-work">More video, credits, and original pitch decks &darr;</a>
+  </section>
+
+  <section id="implementation" aria-labelledby="implementation-heading">
+    <div class="section-top">
+      <h2 id="implementation-heading">Implementation &amp; enablement</h2>
+      <a class="text-link" href="#creative-production">Explore creative production &uarr;</a>
+    </div>
+    <p class="note">Taking a system from discovery through delivery, then helping people use it.</p>
+    <div class="implementation-grid">
+      <article class="pipe featured">
+        <p class="eyebrow">Flypost &middot; Founder and Product Lead &middot; 2022&ndash;2026</p>
+        <h3>Customer deployment at Compass Los Angeles</h3>
+        <p>I owned the engagement from first pitch through technical discovery, deployment, go-live, and training executives and agents. As the only technical person on the project, I also handled ongoing account management and rebuilt parts of the product based on how agents used it.</p>
+        <p>Built six GPT agents for three brokerages; deployed and trained with one, Compass. Staff agents could edit, while customer agents were read-only. Flypost is now offline; its source code remains available.</p>
+        <a class="text-link case-link" href="https://github.com/benjaminmower/flypost">Explore the Flypost source on GitHub &rarr;</a>
+      </article>
+      <article class="pipe">
+        <p class="eyebrow">Apple &middot; Technical Educator and Team Lead &middot; 2008&ndash;2014</p>
+        <h3>Training people to work independently</h3>
+        <p>Delivered thousands of technical workshops over six years, adjusting the depth and pace to the room. Developed onboarding curriculum and mentored new hires.</p>
+        <p>I carried that approach into training the Paramount+ team on its new workflow and brokerage staff on Flypost.</p>
+      </article>
+      <article class="pipe">
+        <p class="eyebrow">Elcano Construction &middot; Professional Services Program Manager</p>
+        <h3>Delivery across competing dependencies</h3>
+        <p>I run two simultaneous multi-million dollar Palisades rebuilds, coordinating trades, architects, engineers, inspectors, insurers, and homeowners. Every requested change is assessed against the schedule before approval.</p>
+        <p>By checking the plans against a window order, I caught three missing clerestory windows before procurement and avoided a seven-week delay and $18,000.</p>
+      </article>
+    </div>
+    <div class="section-actions">
+      <a class="contact-link" href="mailto:benjaminmower@gmail.com">Get in touch</a>
+      <a class="text-link" href="resume.html">Read the full resume &rarr;</a>
+    </div>
+  </section>
+
+  <section id="more-creative-work" aria-labelledby="more-creative-heading">
+    <h2 id="more-creative-heading">More creative work</h2>
+    <p class="note">Original formats, directing, and on-camera work.</p>
+    <div class="videos">
       <a class="vcard" href="https://www.youtube.com/watch?v=sve_4RRbRkE" data-embed="https://www.youtube-nocookie.com/embed/sve_4RRbRkE?autoplay=1" data-thumb="https://i.ytimg.com/vi/sve_4RRbRkE/hqdefault.jpg" data-title="100 for 100">
         <span class="thumb"><span class="play"></span></span>
         <span class="vtext"><span class="vtitle">100 for 100</span>
@@ -142,6 +264,16 @@
         <span class="vtext"><span class="vtitle">Alyce&rsquo;s Art Studio</span>
         <span class="vmeta">Director, co-creator &middot; Art tutorial with Alyce Marie</span></span>
       </a>
+      <a class="vcard" href="https://www.youtube.com/watch?v=x7BypzuVqNU&t=1810s" data-embed="https://www.youtube-nocookie.com/embed/x7BypzuVqNU?autoplay=1&start=1810&rel=0" data-thumb="https://i.ytimg.com/vi/x7BypzuVqNU/hqdefault.jpg" data-title="The Wally Report Podcast">
+        <span class="thumb"><span class="play"></span></span>
+        <span class="vtext"><span class="vtitle">The Wally Report Podcast</span>
+        <span class="vmeta">Cohost</span>
+        <span class="vdesc">Top 5 TV Shows of February 2025.</span></span>
+      </a>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="num">1.5M+</span><span class="lbl">YouTube views combined on I Hope My Ex Doesn&rsquo;t See This and Dark White</span></div>
+      <div class="stat"><span class="num">5M+</span><span class="lbl">Reach of clips from both on TikTok</span></div>
     </div>
   </section>
 
@@ -149,23 +281,6 @@
     <button type="button" id="closePlayer" aria-label="Close video">&times;</button>
     <div class="frame"></div>
   </dialog>
-
-<section>
-    <h2>Production pipelines</h2>
-    <p class="note">Designing the path media takes from pre-production through post and VFX, and the systems that keep it provable.</p>
-    <div class="pipes">
-      <div class="pipe">
-        <h3>On-set image data and color pipeline</h3>
-        <p>Technical authority on set for Netflix, Amazon, and Warner Bros. Discovery productions and commercial campaigns. Designed the data workflow from pre-production through production to post and VFX. Kept chain of custody and audit-ready logging for footage that cannot be reshot.</p>
-        <div class="meta">Silverstack Lab &middot; Premiere Pro &middot; Frame.io &middot; DaVinci Resolve &middot; Canva</div>
-      </div>
-      <div class="pipe">
-        <h3>Production tracking system at Paramount+</h3>
-        <p>Built from scratch after an audit found assets losing chain of custody across three tools. Consolidated them into one system with automated milestone triggers and reporting, covering 200 productions on two Burbank stages. Daily processing went from 6 hours to 30 to 45 minutes, error margin to effectively zero, throughput tripled, with no added headcount. Wrote the playbooks the department standardized on.</p>
-        <div class="meta">Airtable &middot; Frame.io &middot; Entertainment Partners payroll onboarding</div>
-      </div>
-    </div>
-  </section>
 
   <section>
     <h2>Recent DIT credits</h2>
@@ -239,6 +354,7 @@
   (function () {
     var dlg = document.getElementById("player");
     var frame = dlg.querySelector(".frame");
+    var returnHash = "";
     function setThumb(card, url) {
       var t = card.querySelector(".thumb");
       var img = new Image();
@@ -256,6 +372,7 @@
       card.addEventListener("click", function (e) {
         if (!dlg.showModal || !(card.dataset.embed || card.dataset.video)) return;
         e.preventDefault();
+        returnHash = location.hash === "#" + card.id ? "" : location.hash;
         if (card.dataset.video) {
           frame.innerHTML = '<video controls autoplay playsinline preload="metadata" poster="' + card.dataset.poster + '" src="' + card.dataset.video + '" title="' + card.dataset.title + '"></video>';
         } else frame.innerHTML = '<iframe src="' + card.dataset.embed + '" title="' + card.dataset.title + '" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>';
@@ -266,7 +383,7 @@
     function closeIt() { dlg.close(); }
     dlg.addEventListener("close", function () {
       frame.innerHTML = "";
-      if (location.hash && history.replaceState) history.replaceState(null, "", location.pathname + location.search);
+      if (location.hash && history.replaceState) history.replaceState(null, "", location.pathname + location.search + returnHash);
     });
     // Deep link: /#alyces-art-studio opens that video's player on load.
     var target = location.hash && document.getElementById(location.hash.slice(1));
